@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_TRANS_CONTROLLER_HTTP</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>TRANS - Controller HTTP</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_TRANS_CONTROLLER_HTTP</CLSNAME>
+     <CMPNAME>DO_TRANSPORT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Realiza el transporte segun las ordenes pasadas</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_TRANS_CONTROLLER_HTTP</CLSNAME>
+     <CMPNAME>DO_TRANSPORT</CMPNAME>
+     <LANGU>S</LANGU>
+     <DESCRIPT>Realiza el transporte segun las ordenes pasadas</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_TRANS_CONTROLLER_HTTP</CLSNAME>
+     <CMPNAME>GET_INFO_USER</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Obtiene información del usuario</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_TRANS_CONTROLLER_HTTP</CLSNAME>
+     <CMPNAME>GET_INFO_USER</CMPNAME>
+     <LANGU>S</LANGU>
+     <DESCRIPT>Obtiene información del usuario</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_TRANS_CONTROLLER_HTTP</CLSNAME>
+     <CMPNAME>GET_ORDERS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Obtiene las ordenes del usuario</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_TRANS_CONTROLLER_HTTP</CLSNAME>
+     <CMPNAME>GET_ORDERS</CMPNAME>
+     <LANGU>S</LANGU>
+     <DESCRIPT>Obtiene las ordenes del usuario</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_TRANS_CONTROLLER_HTTP</CLSNAME>
+     <CMPNAME>GET_SYSTEM</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Obtiene los sistemas de transporte</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_TRANS_CONTROLLER_HTTP</CLSNAME>
+     <CMPNAME>GET_SYSTEM</CMPNAME>
+     <LANGU>S</LANGU>
+     <DESCRIPT>Obtiene los sistemas de transporte</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_TRANS_CONTROLLER_HTTP</CLSNAME>
+     <CMPNAME>PROCESS_HTTP</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Proceso de la llamada HTTP</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_TRANS_CONTROLLER_HTTP</CLSNAME>
+     <CMPNAME>PROCESS_HTTP</CMPNAME>
+     <LANGU>S</LANGU>
+     <DESCRIPT>Proceso de la llamada HTTP</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
