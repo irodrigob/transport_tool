@@ -1,0 +1,42 @@
+{
+  "DATA": [{
+    "ORDER": "NHP00001",
+    "USER": "BCUSER",
+    "DESCRIPTION": "Order de prueba test",
+    "TYPE": "W",
+    "TYPE_DESC": "Workbench",
+    "TASKS": [{
+      "ORDER": "NSP00011",
+      "STATUS": "D",
+      "USER": "BCUSER",
+      "STATUS_DESC": "Modifiable"
+    }, {
+      "ORDER": "NSP00012",
+      "STATUS": "D",
+      "USER": "DDIC",
+      "STATUS_DESC": "Modifiable"
+    }]
+  }, {
+    "ORDER": "NSP00002",
+    "USER": "BCUSER",
+    "DESCRIPTION": "Order de custo",
+    "TYPE": "K",
+    "TYPE_DESC": "Customizing",
+    "TASKS": [{
+      "ORDER": "NSP00021",
+      "STATUS": "D",
+      "STATUS_DESC": "Modifiable"
+    }]
+  }, {
+    "ORDER": "NSP00003",
+    "USER": "BCUSER",
+    "DESCRIPTION": "transporte de copias",
+    "TYPE": "T",
+    "TYPE_DESC": "Transport Copies",
+    "TASKS": [{
+      "ORDER": "NSP00031",
+      "STATUS": "D",
+      "STATUS_DESC": "Modifiable"
+    }]
+  }]
+}

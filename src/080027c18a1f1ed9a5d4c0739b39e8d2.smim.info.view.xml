@@ -1,0 +1,17 @@
+<mvc:View
+        xmlns:mvc="sap.ui.core.mvc"
+        controllerName="com.irb.trans.controller.info"
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+        xmlns:layout="sap.ui.layout"
+        displayBlock="true">
+    <MessagePage showHeader="true"
+                 text="{infoDialog>/Text}"
+                 description="{infoDialog>/Description}"
+                 icon="{view>/infoIcon}"
+                 title="{infoDialog>/Title}"
+                 showNavButton="true"
+                 navButtonPress="onNavBack">
+    </MessagePage>
+</mvc:View>
+

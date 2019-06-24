@@ -1,0 +1,33 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core">
+
+    <ViewSettingsDialog
+            id="viewSettingsDialog"
+            confirm="onConfirmSettingsUserOrders"
+            resetFilters="">
+        <filterItems>
+            <ViewSettingsFilterItem
+                    id="orderType"
+                    text="{i18n>myOrders.FilterUserOrders.FilterType}"
+                    key="type"
+                    multiSelect="true">
+                <items>
+                    <ViewSettingsItem
+                            text="{i18n>myOrders.FilterUserOrders.FilterType.Customizing}"
+                            key="orderTypeK"
+                            id="orderTypeCustomizing"/>
+                    <ViewSettingsItem
+                            text="{i18n>myOrders.FilterUserOrders.FilterType.Workbench}"
+                            key="orderTypeW"
+                            id="orderTypeWorkbench"/>
+                    <ViewSettingsItem
+                            text="{i18n>myOrders.FilterUserOrders.FilterType.Transport}"
+                            key="orderTypeT"
+                            id="orderTypeTransport"/>
+                </items>
+            </ViewSettingsFilterItem>
+        </filterItems>
+    </ViewSettingsDialog>
+
+</core:FragmentDefinition>

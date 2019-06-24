@@ -1,0 +1,48 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+        xmlns:f="sap.ui.layout.form"
+        xmlns:l="sap.ui.layout">
+    <Dialog
+            title="{i18n>MyOrders.paramsTransportDialog.title}"
+            state=""
+            type="Standard"
+            resizable="true">
+        <content>
+            <VBox class="sapUiSmallMargin">
+                <f:SimpleForm id="SimpleFormChange354"
+                              minWidth="1024"
+                              maxContainerCols="2"
+                              editable="true"
+                              layout="ResponsiveGridLayout"
+                              labelSpanL="2"
+                              labelSpanM="2"
+                              emptySpanL="3"
+                              emptySpanM="3"
+                              columnsL="1"
+                              columnsM="1"
+                              class="editableForm">
+                    <f:content>
+                        <Label text="{i18n>MyOrders.paramsTransportDialog.lblDescription}" design="Bold" />
+                        <Input value="{paramsTransport>/DESCRIPTION}" />
+                        <Label text="{i18n>MyOrders.paramsTransportDialog.lblSelSystem}" design="Bold"/>
+                        <ComboBox showSecondaryValues= "true" items="{path: 'SYSTEM>/', sorter: { path: 'SYSTEM>SYSTEM_NAME' } }" selectionChange="onSelectSystem" id="comboSystem" selectedKey="{paramsTransport>/SYSTEM}">
+                            <core:ListItem key="{SYSTEM>SYSTEM_NAME}" text="{SYSTEM>SYSTEM_NAME}" additionalText = "{SYSTEM>SYSTEM_DESC}"/>
+                        </ComboBox>
+                    </f:content>
+                </f:SimpleForm>
+            </VBox>
+
+        </content>
+        <beginButton>
+            <Button
+                    text="{i18n>MyOrders.paramsTransportDialog.btnConfirm}"
+                    press="onConfirmParamsTransport"/>
+        </beginButton>
+        <endButton>
+            <Button
+                    text="{i18n>MyOrders.paramsTransportDialog.btnCancel}"
+                    press="onCancelParamsTransport"/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,22 @@
+<mvc:View
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:core="sap.ui.core"
+        controllerName="com.irb.trans.controller.home"
+        xmlns="sap.m"
+        displayBlock="true">
+
+    <FlexBox height="30%" id="homeFB11"/>
+    <FlexBox id="homeFBOpciones" direction="Row" alignItems="Start" justifyContent="Center">
+    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="My transport Orders"
+                 subheader="" press="pressTile" id="myOrders">
+        <tileContent>
+            <TileContent>
+                <content>
+                    <ImageContent src="sap-icon://inventory"/>
+                </content>
+            </TileContent>
+        </tileContent>
+    </GenericTile>
+    </FlexBox>
+
+</mvc:View>

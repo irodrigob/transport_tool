@@ -1,0 +1,9 @@
+{
+  "DATA": [{
+    "SYSTEM_NAME": "NSI",
+    "SYSTEM_DESC": "Integracion"
+  }, {
+    "SYSTEM_NAME": "NSPw",
+    "SYSTEM_DESC": "HR"
+  }]
+}

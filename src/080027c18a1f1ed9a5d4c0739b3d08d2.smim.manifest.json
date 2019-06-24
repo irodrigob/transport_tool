@@ -1,0 +1,125 @@
+{
+  "_version": "1.1.0",
+  "sap.app": {
+    "_version": "1.1.0",
+    "id": "com.irb.trans",
+    "type": "application",
+    "i18n": "i18n/i18n_es.properties",
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "ach": "CA-UI5-DOC"
+  },
+  "sap.ui": {
+    "_version": "1.1.0",
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    },
+    "supportedThemes": [
+      "sap_bluecrystal"
+    ]
+  },
+  "sap.ui5": {
+    "_version": "1.1.0",
+    "rootView": "com.irb.trans.view.main",
+    "dependencies": {
+      "minUI5Version": "1.30",
+      "libs": {
+        "sap.m": {}
+      }
+    },
+    "config": {
+      "custApp": {
+        "typeReadModel": "H"
+      },
+      "sap": {
+        "localMode":true,
+        "path": "sap/bc/ztrans"
+      }
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.irb.trans.i18n.i18n"
+          }
+        },
+      "appData":{
+        "user":{
+          "file" : "",
+          "http" : "GET_USER_INFO"
+        },
+        "userOrders":{
+          "file" : "model/userOrders.json",
+          "http" : "GET_ORDERS"
+        },
+        "rfc":{
+          "file" : "model/system.json",
+          "http" : "GET_SYSTEM"
+        },
+        "transport":{
+          "file" : "",
+          "http" : "DO_TRANSPORT"
+        }
+      }
+      },
+      "resources": {
+        "css": [
+          {
+            "uri": "css/transport.css"
+          }
+        ]
+      },
+      "routing": {
+        "config": {
+          "routerClass": "sap.m.routing.Router",
+          "viewType": "XML",
+          "viewPath": "com.irb.trans.view",
+          "controlId": "trans",
+          "controlAggregation": "pages"
+        },
+        "routes": [
+          {
+            "pattern": "",
+            "name": "myOrders",
+            "target": "myOrders"
+          },
+          {
+            "pattern": "home",
+            "name": "home",
+            "target": "home"
+          },
+          {
+            "pattern": "info",
+            "name": "info",
+            "target": "info"
+          }
+        ],
+        "targets": {
+          "home": {
+            "viewName": "home",
+            "viewLevel": 0
+          },
+          "myOrders": {
+            "viewName": "myOrders",
+            "viewLevel": 1
+          },
+          "info": {
+            "viewName": "info",
+            "viewLevel": 1
+          }
+        }
+      },
+      "constants": {
+        "OriginSAP": "S",
+        "ActionDelete": "D",
+        "ActionUpdate": "U",
+        "ActionInsert": "I"
+      }
+    }
+}

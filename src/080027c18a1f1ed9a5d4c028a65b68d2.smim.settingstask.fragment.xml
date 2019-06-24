@@ -1,0 +1,42 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core">
+
+    <ViewSettingsDialog
+            id="viewSettingsTask"
+            confirm="onConfirmSettingsTask"
+            resetFilters=""
+            title="{i18>MyOrders.settingsTask.title}">
+        <customTabs>
+            <ViewSettingsCustomTab id="app-settings" icon="sap-icon://filter" title="{i18n>myOrders.settingsTask.tabTask}"
+                                   tooltip="{i18n>myOrders.settingsTask.tabTask}">
+                <content>
+                    <Panel height="386px">
+                        <content>
+                            <Label text="{i18n>MyOrders.settingsTask.lblShowTask}" design="Bold"/>
+                            <SegmentedButton
+                                    selectedKey="showTaskModifiable"
+                                    id="showTask"
+                                    width="100%" >
+                                <items>
+                                    <SegmentedButtonItem  text="{i18n>MyOrders.settingsTask.btnShowTaskModifiable}" id="showTaskModifiable" key="showTaskModifiable"/>
+                                    <SegmentedButtonItem  text="{i18n>MyOrders.settingsTask.btnShowTaskAll}" id="showTaskAll" key="showTaskAll"/>
+                                </items>
+                            </SegmentedButton>
+                        </content>
+                    </Panel>
+                </content>
+            </ViewSettingsCustomTab>
+            <ViewSettingsCustomTab id="example-settings" icon="sap-icon://inventory" tooltip="{i18n>myOrders.settingsTask.tabConfiguration}">
+                <content>
+                    <Panel height="386px">
+                        <content>
+                        </content>
+                    </Panel>
+                </content>
+            </ViewSettingsCustomTab>
+        </customTabs>
+
+    </ViewSettingsDialog>
+
+</core:FragmentDefinition>

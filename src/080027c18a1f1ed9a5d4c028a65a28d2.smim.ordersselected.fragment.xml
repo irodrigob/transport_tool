@@ -1,0 +1,65 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:table="sap.ui.table"
+        xmlns:core="sap.ui.core"
+        xmlns:semantic="sap.m.semantic">
+
+    <!-- title="{i18n>myOrders.Detail.Tareas.Title}" -->
+    <semantic:DetailPage id="tareas" showSubHeader="false">
+        <semantic:content>
+            <table:TreeTable
+                    rows="{path: 'OrdersSelected>/', parameters: {arrayNames:['ORDERS', 'TASKS']}}"
+                    width="100%"
+                    id="ordersSelected"
+                    rowSelectionChange="onRowSelectionChange"
+                    expandFirstLevel="true">
+<!--                <table:toolbar visible="false">
+                    <Toolbar>
+                        <content>
+                            <ToolbarSpacer/>
+                            <Button tooltip="{i18n>myOrders.Detail.Task.btnLog}" icon="sap-icon://drop-down-list"
+                                    press="onOpenLog" id="btnLogTransportOld" text="{/numMsgReturn}" type="Emphasized" visible="false"/>
+                        </content>
+                    </Toolbar>
+                </table:toolbar> -->
+                <table:columns>
+                    <table:Column filterProperty="ORDER" hAlign="Left" width="5%">
+                        <Label text="{i18n>myOrders.Detail.Tareas.tableTaskOrder.ColOrder}" class="colHeaderTable"/>
+                        <table:template>
+                            <Text text="{path: 'OrdersSelected>ORDER'}"/>
+                        </table:template>
+                    </table:Column>
+                    <table:Column width="10%" hAlign="Left">
+                        <Label text="{i18n>myOrders.Detail.Tareas.tableTaskOrder.ColDescripcion}"
+                               class="colHeaderTable"/>
+                        <table:template>
+                            <Text text="{path: 'OrdersSelected>DESCRIPTION'}"/>
+                        </table:template>
+                    </table:Column>
+                    <table:Column width="10%" hAlign="Left">
+                        <Label text="{i18n>myOrders.Detail.Tareas.tableTaskOrder.ColUser}"
+                               class="colHeaderTable"/>
+                        <table:template>
+                            <Text text="{path: 'OrdersSelected>USER'}"/>
+                        </table:template>
+                    </table:Column>
+                    <table:Column width="10%" hAlign="Left">
+                        <Label text="{i18n>myOrders.Detail.Tareas.tableTaskOrder.ColStatus}"
+                               class="colHeaderTable"/>
+                        <table:template>
+                            <Text text="{path: 'OrdersSelected>STATUS_DESC'}"/>
+                        </table:template>
+                    </table:Column>
+
+                </table:columns>
+            </table:TreeTable>
+        </semantic:content>
+        <semantic:customFooterContent>
+            <OverflowToolbarButton tooltip="{i18n>myOrders.Detail.Task.btnTransport}" icon="sap-icon://inventory"
+                                   press="onTransport" visible="false" id="btnTransport"/>
+            <OverflowToolbarButton icon="sap-icon://settings" text="{i18n>myOrders.Detail.Tareas.footer.btnConf}"
+                                   press="onOpenSettingTask"/>
+        </semantic:customFooterContent>
+
+    </semantic:DetailPage>
+</core:FragmentDefinition>

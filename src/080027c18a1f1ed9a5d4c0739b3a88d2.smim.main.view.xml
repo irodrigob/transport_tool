@@ -1,0 +1,14 @@
+<mvc:View
+        controllerName="com.irb.trans.controller.main"
+        xmlns="sap.m"
+        xmlns:mvc="sap.ui.core.mvc"
+        displayBlock="true">
+
+    <Page
+            id="mainPage"
+            showHeader="false">
+        <content>
+            <App id="trans"/>
+        </content>
+    </Page>
+</mvc:View>

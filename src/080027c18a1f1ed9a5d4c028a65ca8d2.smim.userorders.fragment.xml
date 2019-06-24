@@ -1,0 +1,51 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:table="sap.ui.table"
+        xmlns:core="sap.ui.core"
+        xmlns:semantic="sap.m.semantic"
+        xmlns:irb="com.irb.trans.control">
+
+    <!--  -->
+    <semantic:MasterPage id="ordenes"  icon="sap-icon://action" showNavButton="false" navButtonPress="onNavBack" showSubHeader="true">
+        <!-- title="{i18n>myOrders.Master.Order.Title}" -->
+        <semantic:subHeader>
+            <Toolbar>
+                <SearchField
+                        liveChange="onSearchOrder"
+                        width="100%"/>
+            </Toolbar>
+        </semantic:subHeader>
+        <semantic:content>
+            <List id="userOrders" items="{path: 'UserOrders>/',
+                                  sorter: {path: 'UserOrders>TYPE_DESC',
+				                           descending: true,
+				                           group: true},
+			                       groupHeaderFactory: '.getGroupHeader'}"
+                  mode="MultiSelect"
+                  includeItemInSelection="true" selectionChange="orderSelect">
+                <CustomListItem>
+                    <FlexBox
+                            alignItems="Start"
+                            justifyContent="SpaceBetween">
+                        <items>
+                            <ObjectIdentifier title="{path: 'UserOrders>ORDER'}" text="{path: 'UserOrders>DESCRIPTION'}"
+                                              titleActive="false" titlePress=""/>
+                            <Label text="{path: 'UserOrders>USER'}"/>
+                        </items>
+                    </FlexBox>
+                </CustomListItem>
+            </List>
+        </semantic:content>
+        <semantic:customFooterContent>
+            <OverflowToolbarButton icon="sap-icon://refresh" text="{i18n>myOrders.Master.Order.btnRefresh}"
+                                   press="onRefreshOrders"/>
+            <irb:notification/>
+        </semantic:customFooterContent>
+        <semantic:filter>
+            <semantic:FilterAction
+                    id="filter"
+                    press="onOpenSettingUserOrders" />
+        </semantic:filter>
+
+    </semantic:MasterPage>
+</core:FragmentDefinition>

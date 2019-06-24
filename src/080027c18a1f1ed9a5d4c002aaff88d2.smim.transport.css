@@ -1,0 +1,21 @@
+/* Estilo que se usa en una caja en la parte superior que se usa en el objeto shell.
+ Por defecto es de 4px*/
+.sapMShellBrandingBar{
+    height: 0px;
+}
+
+.sapMPageHeader::before{
+    border: 0px;
+}
+
+.tileLayout {
+    float: left;
+}
+
+.sapMLIBContent {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    margin-right: 3px;
+}
+
+
